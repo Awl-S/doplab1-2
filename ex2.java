@@ -8,15 +8,20 @@ public class Main {
         int x = Scanner_name.nextInt();
         System.out.println(+ x);
 
-        int arr[];
-        arr = new int[x];
+        int arr[][];
+        arr = new int[x][x];
 
         int max = 100, min = -100;
         int range = max-min+1;
 
-        for (int i = 0; i < x; i++){
-            arr[i] = (int)(Math.random()*range)+min;
-            System.out.print(arr[i] + " ");
+        for(int j = 0; j < x; j++){
+            for (int i = 0; i < x; i++){
+                arr[j][i] = (int)(Math.random()*range)+min;
+                System.out.print(arr[j][i] + "\t");
         }
+        System.out.println();
+    }
+        
+        
     }
 }
